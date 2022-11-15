@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#busctl get-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager ScheduledShutdown
+#busctl --system introspect org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager | grep "\.ScheduledShutdown"
+
+while :
+do
+  if [ -f /run/systemd/shutdown/scheduled ]; then
+        echo "shutdown scheduled!!"
+  fi
+  sleep 1
+done
+
