@@ -3,7 +3,6 @@ version: "1.0"
 summary: Simple snap 
 description: |
         Simple snap that checks every second if a shutdown has been scheduled
-        to build ...
        
 confinement: strict
 grade: stable
@@ -16,8 +15,6 @@ apps:
   check-shutdown:
      command: check-shutdown
      daemon: simple
-#     install-mode: disable
-#     plugs: [shutdown, mount-observe, system-observe]
 
 parts:
   check-shutdown:
